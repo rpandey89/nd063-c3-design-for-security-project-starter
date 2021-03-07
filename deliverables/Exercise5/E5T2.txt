@@ -1,0 +1,44 @@
+# Identify tools that will allow you to do the following:
+
+## Scan infrastructure as code templates
+Checkov
+TFlint
+Terrafirma
+Accurics
+CloudSploit
+
+### Example vulnerability
+The tools can examine following vulnerabilities:
+1. Misconfigurations such as publicly accessible SSH port, data storage services, databases, and configuring some open-security groups
+2. Compliance violations such as untagged resources, drifting configurations causing infrastructure mutability
+
+##Scan AMI’s or containers for OS vulnerabilities
+AWS Inspector
+Clair
+Anchore
+Falco
+JFrog Xray
+Qualys
+Trivy
+twistlock
+
+### Example vulnerability
+The tools help in identifying:
+1. Any known Common Vulnerabilities and Exposures or security flaws in the libraries used by OS or Application image that can be used by an attacked for malicious intent
+2. Any ports such as SSH port that are open for public access uknowingly
+
+##Scan an AWS environment for cloud configuration vulnerabilities
+AWS Config
+AWS GuardDuty
+AWS Inspector
+Qualys
+Palo Alto Prisma Cloud
+Scout2
+Cloudsploit
+CloudCustodian
+Fugue
+
+### Example vulnerability
+1. An EC2 instance is open for public access via UDP, RDP
+2. S3 buckets are open for public access read/write
+3. S3 buckets are not encrypted

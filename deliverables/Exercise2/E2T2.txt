@@ -1,0 +1,13 @@
+Research and analyze which of the vulnerabilities appear to be related to the code that was deployed for the environment in this project.
+1. Web Server instance are reachable by internet as the UDP ports are open to accept connections on multiple ports such as 751, 749, 750, 546, 547, 515, 530, 464, 514, 445, 138, 443, 135, 137, 111, 68, 88, 42
+2. S3 buckets should have server side encryption enabled and should use secure socket layer
+3. Security groups should not allow ingress from 0.0.0.0/0 to ports 22 and 3389
+
+Bonus - provide recommendations on how to remediate the vulnerabilities.
+1. Remove ingress rule on ports other than 5000 and 80 in 'Webapp-SG' in c3-app.yml
+2. Add encryption to the c3-s3.yml file
+ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: 'aws:kms'
+              KMSMasterKeyID: KMS-KEY
+

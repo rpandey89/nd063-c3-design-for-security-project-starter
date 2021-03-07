@@ -1,0 +1,11 @@
+# Identify 2-3 changes that can be made to our environment to prevent an ssh brute force attack from the internet.
+1. We should remove the ingress rule of 0.0.0.0/0 on port 22 in the security group so that ssh access is not at all available to the app instance from anywhere over the internet.
+2. Keep ingress rule only on ports required to access webapp i.e. 5000 or 80
+3. Give ssh access to user group that assume a certain role with least privileges
+
+# Neither instance should have had access to the secret recipes bucket, in the even that instance API credentials were compromised how could we have prevented access to sensitive data.
+1. Enable server side encryption on secret recipes bucket
+2. Disable public access
+3. Enable secure socket layer access
+4. Create IAM policy that can provide read and write access to certain profiles
+5. Assign users that require access to the policy defined above

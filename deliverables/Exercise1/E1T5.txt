@@ -1,0 +1,10 @@
+Based on the architecture diagram, and the steps you have taken so far to upload data and access the application web service, identify at least 2 obvious poor practices as it relates to security.  Include justification.
+
+# Poor practice 1
+The S3 buckets are publicly accessible and the contents are not encrypted. An attacker can easily put malicious content or access the content stored on the buckets.
+
+# Poor practice 2
+The load balancer application url is not working on SSL. Thus, the connection can be hijacked by an attacker.
+
+# Poor practice 3
+The app security group is open to all connections which can let the attackers to perform DDOS attacks quite frequently.
